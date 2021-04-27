@@ -7,9 +7,21 @@
     <title>鷹捷詠春</title>
     <link rel="stylesheet" href="assets/tailwind.css">
     <style>
-        #banner {
-            
+    
+        #class {
+            background-image: url('assets/class-bg-image.png');
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 5em;
+            background-size: auto;
         }
+
+        @media screen and (min-width:768px) {
+            #class {
+                background-position-y: center;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -32,19 +44,70 @@
             <img src="assets/badge.png" class="absolute xl:ml-40 lg:ml-28 lg:w-1/5 ml-20 w-1/4" alt="鷹捷詠春印">
         </div>
     </section>
-    <div id="about" class="bg-black text-white min-h-screen">
-        <div class="container mx-auto">
-            關於鷹捷
+    <div id="about" class="bg-black text-white">
+        <div class="container relative mx-auto md:py-32 py-24 flex flex-col md:flex-row px-8 md:px-0 space-y-8 md:space-y-0">
+            <div class="md:w-1/2 w-full">
+                <div class="xl:mr-16 md:mr-8 leading-loose tracking-wider lg:text-lg">
+                    <div class="text-5xl lg:pb-20 md:flex-row flex-col  flex pb-10 w-full md:space-x-6 space-y-10 md:space-y-0 md:items-center">
+                        <span class="flex-shrink-0">關於鷹捷</span>
+                        <div class="border-b border-red-900 w-full"></div>
+                    </div>
+                    <p>
+                        詠春 (WingChun) 是一門連重視科學的老外也瘋狂學習的武術，好萊塢明星小勞勃道尼也深深著迷。但是電影葉問之後，網路上這麼多文章，路邊這麼多詠春拳館招牌，哪些才是真功夫?
+                        <br><br>
+                        師父黃英哲以實用為目的，重視傳統功力訓練，授予完整的詠春觀念，並且透過實戰練習讓功夫不只是神祕的蹲馬步、打套路，而是真真實實可以保護自己跟家人的技能！
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/2 w-full md:absolute md:right-0 lg:-top-16 items-center">
+                <img class="w-full" src="assets/about-image.png" alt="">
+            </div>
         </div>
     </div>
     <div id="class" class="min-h-screen">
-        <div class="container mx-auto">
-            課程內容
+        <div class="container mx-auto flex flex-col md:flex-row-reverse px-8 py-24 space-y-8 md:px-0 md:py-32 md:space-y-0">
+            <div class="w-full md:w-1/2">
+                <div class="xl:ml-16 md:ml-8 leading-loose tracking-wider lg:text-lg">
+                    <div class="text-5xl lg:pb-20 md:flex-row flex-col flex pb-10 w-full md:space-x-6 space-y-10 md:space-y-0 md:items-center">
+                        <span class="flex-shrink-0">課程內容</span>
+                        <div class="border-b border-red-600 w-full"></div>
+                    </div>
+                    <div>            
+                        <p>「拳理即生理」練拳是要符合身體的運作。</p><br>
+                        <p>
+                        師父講解拳理非常細心，綱舉目張，親自手把手帶學生黐手、過手。著重詠春的基本觀念以及身體上的開發，並根據學生的個性及身材給予不同的調整。從中讓學生感受詠春拳簡單又直接的拳理外並時時調整學生的手法及動作。
+                        </p><br>
+                        <p>
+                            一 、拳套教學：小念頭、尋橋、標指、木人樁、六點半棍<br>
+                            二 、手法線位運用：最有效的防禦就是攻擊<br>
+                            三 、朝型步法運用：戰場上決不背對敵人<br>
+                            四 、身體結構運用：身體力學的瞬息萬變<br>
+                            五 、腰胯運用： 爆炸性的力量來源
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <img class="w-full" src="assets/class-image.png" alt="">
+            </div>
         </div>
     </div>
-    <div id="lineage" class="bg-black text-white min-h-screen">
+    <div id="lineage" class="bg-black text-white min-h-screen py-24 md:py-32">
         <div class="container mx-auto">
-            師承
+            <div class="w-full">
+                <div class="xl:mr-32 lg:mr-16 sm:mr-8 leading-loose tracking-wider lg:text-lg">
+                    <div class="text-5xl lg:pb-20 md:flex-row flex-col  flex pb-10 w-full md:space-x-6 space-y-10 md:space-y-0 md:items-center">
+                        <span class="flex-shrink-0">師承</span>
+                        <div class="border-b border-red-900 w-full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
     <div id="location" class="min-h-screen">
