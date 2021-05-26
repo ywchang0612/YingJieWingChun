@@ -27,6 +27,9 @@
                 background-position-y: center;
             }
         }
+        html {
+            scroll-behavior: smooth;
+        }
 
     </style>
 </head>
@@ -238,7 +241,7 @@
             </div>
         </div>
     </div>
-    <div class="py-10 border-t-2">
+    <footer class="py-10 border-t-2">
         <div class="flex justify-around md:flex-row flex-col space-y-2 md:space-y-0 px-8 md:px-0">
             <div>聯絡人<br>黃英哲 師父</div>
             <div class="pr-16">聯絡電話<br><a href="tel:0987-747-867">0987-747-867</a></div>
@@ -247,41 +250,50 @@
             </div>
         </div>
     </footer>
+    <div class="fixed bottom-6 right-6 w-10 h-10 bg-red-800 cursor-pointer bg-opacity-30 rounded hover:bg-opacity-70">
+        <a href="#" class="backToTop">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+        </a>
+    </div>
     <script>
-        let tabsContainer = document.querySelector("#tabs");
+        document.addEventListener('DOMContentLoaded', () => {
+            let tabsContainer = document.querySelector("#tabs");
 
-        let tabTogglers = tabsContainer.querySelectorAll("a");
+            let tabTogglers = tabsContainer.querySelectorAll("a");
 
-        tabTogglers.forEach(function(toggler) {
+            tabTogglers.forEach(function(toggler) {
 
-            toggler.addEventListener("click", function(e) {
+                toggler.addEventListener("click", function(e) {
 
-                e.preventDefault();
+                    e.preventDefault();
 
-                let tabName = this.getAttribute("href");
+                    let tabName = this.getAttribute("href");
 
-                let tabContents = document.querySelector("#tab-contents");
+                    let tabContents = document.querySelector("#tab-contents");
 
-                for (let i = 0; i < tabContents.children.length; i++) {
-                
-                    tabTogglers[i].classList.remove("border-opacity-100");
+                    for (let i = 0; i < tabContents.children.length; i++) {
+                    
+                        tabTogglers[i].classList.remove("border-opacity-100");
 
-                    tabContents.children[i].classList.remove("hidden");
+                        tabContents.children[i].classList.remove("hidden");
 
-                    if ("#" + tabContents.children[i].id === tabName) {
-                        continue;
+                        if ("#" + tabContents.children[i].id === tabName) {
+                            continue;
+                        }
+
+                        tabContents.children[i].classList.add("hidden");
+                        
                     }
 
-                    tabContents.children[i].classList.add("hidden");
-                    
-                }
-
-                e.target.classList.add("border-opacity-100");
+                    e.target.classList.add("border-opacity-100");
+                });
             });
-        });
 
-        document.getElementById("default-tab").click();
+            document.getElementById("default-tab").click();
 
+        })
     </script>
 </body>
 </html>
