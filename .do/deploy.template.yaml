@@ -1,0 +1,8 @@
+spec:
+  name: ying-jie-wing-chun-official
+  static_sites:
+  - environment_slug: html
+    git:
+      branch: main
+      repo_clone_url: https://github.com/ywchang0612/YingJieWingChun.git
+    name: ying-jie-wing-chun-official

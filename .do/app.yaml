@@ -1,0 +1,8 @@
+name: ying-jie-wing-chun-official
+static_sites:
+- environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: ywchang0612/YingJieWingChun
+  name: ying-jie-wing-chun-official
